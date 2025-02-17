@@ -1,0 +1,16 @@
+The solution involves removing the `!important` flag from the less specific selector or using a more specific selector to override the parent's style.
+
+Here's a corrected version of the CSS:
+
+```css
+.container {
+  font-size: 16px;
+}
+
+.container p {
+  color: blue;
+  font-size: 14px; /* No !important needed */
+}
+```
+
+This revised CSS leverages the natural specificity of `.container p` to correctly override the `font-size` set on the global `p` selector, resolving the unexpected styling behavior.
