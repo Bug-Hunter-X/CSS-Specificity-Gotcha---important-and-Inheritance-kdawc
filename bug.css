@@ -1,0 +1,19 @@
+The following CSS code snippet demonstrates an uncommon error related to specificity and inheritance:
+
+```css
+.container {
+  font-size: 16px;
+}
+
+.container p {
+  color: blue;
+}
+
+p {
+  font-size: 14px !important;
+}
+```
+
+In this example, the `p` element inside the `.container` class inherits the `font-size: 16px` from its parent. However, the `!important` flag on `font-size: 14px` in the global `p` selector overrides the inherited value, even though the parent's selector is more specific.
+
+This behavior can lead to unexpected styling if not properly understood.  The `!important` flag should be used sparingly, as it can make CSS harder to maintain and debug.
